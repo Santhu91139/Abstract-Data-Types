@@ -74,4 +74,43 @@ public class Queue_Data_Structure {
   
       System.out.println("\nrear_index index-> " + rear_index);  
     }  
+  } 
+  
+  public static void main(String[] args) {  
+  
+    Queue_Data_Structure q = new Queue_Data_Structure();  
+    char ch;  
+    System.out.println("\nSIZE of Queue Data Structure is 8\n");  
+    Scanner scan = new Scanner(System.in);  
+        /**  Perform operations  **/  
+        do      
+        {  
+            System.out.println("\nSelect one of the operations::");  
+            System.out.println("1. To insert data in the Queue_Data_Structure Data Structure.");  
+            System.out.println("2. To display the data present in the Queue_Data_Structure Data Structure.");  
+            System.out.println("3. To perform deQueue_Data_Structure operation on the Queue_Data_Structure Data Structure.");  
+   
+            int choice = scan.nextInt();              
+            switch (choice)  
+            {  
+            case 1 :   
+                System.out.println("Enter integer element to insert");  
+                q.enQueue_Data_Structure(scan.nextInt());                       
+                break;                            
+            case 2 :   
+                System.out.println("Queue_Data_Structure::");  
+                q.display();  
+                break;                                            
+            case 3 :   
+                // System.out.println("Data removed.");  
+                q.deQueue_Data_Structure();  
+                break;       
+            default :   
+                System.out.println("Wrong Entry \n ");  
+                break;     
+            }  
+            System.out.println("\nDo you want to continue (Type y or n) \n");  
+            ch = scan.next().charAt(0);                          
+        } while (ch == 'Y'|| ch == 'y');  
   }  
+}
